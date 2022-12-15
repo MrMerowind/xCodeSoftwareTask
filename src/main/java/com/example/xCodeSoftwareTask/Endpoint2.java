@@ -1,5 +1,6 @@
 package com.example.xCodeSoftwareTask;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "numbers")
 public class Endpoint2 {
     
+    @CrossOrigin
     @PostMapping("sort-command")
     public NumbersResponse sort(@RequestBody Numbers numbers)
     {

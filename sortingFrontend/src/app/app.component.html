@@ -1,8 +1,14 @@
 <div class="background">
   <div class="foreground">
-    <form [formGroup]="sortNumbersForm">
+    <form [formGroup]="sortNumbersForm" (submit)="sortNumbersFormSubmit()">
     <label>Wpisz liczby do sortowania oddzielone spacją:<br>
-      <input type="text" placeholder="Tu wpisz liczby." value="" width="300px" formControlName="numbersInput"/></label>
+      <input type="text" placeholder="Tu wpisz liczby." value="" name="numbersInput" formControlName="numbersInput"/></label><br>
+      <label><input type="checkbox" value="false" name="isAscending" formControlName="isAscending"/>Rosnąco</label><br>
+      <button type="submit">Sortuj</button>
     </form>
+  </div>
+  <br>
+  <div class="numberPlateWrapper">
+    <div class="numberPlate" *ngFor="let i of sortingServerService.sortedNumbers">{{ i }}</div>
   </div>
 </div>

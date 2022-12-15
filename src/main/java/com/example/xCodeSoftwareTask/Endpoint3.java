@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping(path = "currencies")
 public class Endpoint3 {
     
+    @CrossOrigin(origins = "http://localhost:8080")
     @PostMapping("get-current-currency-value-command")
     public ResponseEntity<CurrencyResponse> sort(@RequestBody Currency currencyInput) throws IOException
     {
