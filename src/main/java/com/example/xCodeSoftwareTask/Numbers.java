@@ -4,13 +4,9 @@ public class Numbers {
     private int[] numbers;
     private String order;
     
-    Numbers()
-    {
-        this.numbers = null;
-        this.order = "DESC";
-    }
+    public Numbers() {}
 
-    Numbers(int[] numbers, String order)
+    public Numbers(int[] numbers, String order)
     {
         this.numbers = numbers;
         this.order = order;
@@ -28,7 +24,7 @@ public class Numbers {
 
     public void setOrder(String order)
     {
-        this.order = order;;
+        this.order = order;
     }
 
     public String getOrder()
@@ -45,12 +41,13 @@ public class Numbers {
     public void quickSort(int start, int end) throws IllegalAccessException
     {
         if(this.numbers == null) return;
+        if(this.order == null) this.order = "DESC";
         if(end == this.numbers.length) end--;
         if(start < 0 || end >= numbers.length)
         {
             throw new IllegalAccessException("Wrong range for quickSort");
         }
-        if(this.order == "ASC")
+        if(order.equals("ASC"))
         {
             if(start >= end) return;
             int frontier = start;

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(path = "status/ping")
 public class Endpoint1 {
+
     @GetMapping
     public String ping()
     {
