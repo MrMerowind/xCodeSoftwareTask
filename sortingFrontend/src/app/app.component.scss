@@ -1,5 +1,29 @@
-@import url("config");
-.backgroundcolor
+@import "config";
+
+.background
 {
     background-color: $backgroundcolor;
+    margin: 0;
+    padding: 3rem;
+    height: 100vh;
+    .foreground
+    {
+        background-color: $foregroundcolor;
+        color: $textcolor;
+        border-radius: 2rem;
+        width: 90%;
+        text-align: center;
+        margin: 3rem auto;
+        label
+        {
+            margin-top: 1rem;
+            line-height: 3rem;
+            font-size: 2rem;
+        }
+        input[type=text]
+        {
+            font-size: 2rem;
+            height: 3rem;;
+        }
+    }
 }
