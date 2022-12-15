@@ -38,11 +38,13 @@ public class Numbers {
 
     public void quickSortInit() throws IllegalAccessException
     {
+        if(this.numbers == null) return;
         quickSort(0, this.numbers.length - 1);
     }
 
     public void quickSort(int start, int end) throws IllegalAccessException
     {
+        if(this.numbers == null) return;
         if(end == this.numbers.length) end--;
         if(start < 0 || end >= numbers.length)
         {

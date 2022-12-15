@@ -35,6 +35,10 @@ class XCodeSoftwareTaskApplicationTests {
 		numbers.setOrder("ASC");
 		numbers.quickSortInit();
 		assertArrayEquals(numbers.getNumbers(), response2);
+
+		numbers.setNumbers(null);
+		numbers.quickSortInit();
+		assertEquals(numbers.getNumbers(), null);
 	}
 
 }
